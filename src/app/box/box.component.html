@@ -1,0 +1,9 @@
+<section>
+  <table *ngIf="valueMatrix" class="grid">
+    <tr *ngFor="let row of tileStateMatrix">
+      <td *ngFor="let tileState of row;trackBy:tileState?.value">
+        <app-tile [tileState]="tileState" [tileSize]="tileSize" [draggable]="tileIsDraggable(tileState)" (tileSwap)="onTileSwap($event)"></app-tile>
+      </td>
+    </tr>
+  </table>
+</section>

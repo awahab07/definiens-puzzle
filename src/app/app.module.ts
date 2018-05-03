@@ -3,16 +3,21 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { BoxComponent } from './box/box.component';
+import { TileComponent } from './tile/tile.component';
+import {GameService} from './shared/game.service';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BoxComponent,
+    TileComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [GameService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
