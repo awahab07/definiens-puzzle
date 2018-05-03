@@ -1,8 +1,0 @@
-<div class="tile" #tile *ngIf="tileState && tileState.value; else droppableTileTmpl" [attr.draggable]="draggable" (dragstart)="onDragStart($event)" [style.width.px]="tileSize" [style.height.px]="tileSize">
-  {{tileState.value}}
-</div>
-
-<ng-template #droppableTileTmpl>
-  <div class="tile droppable" #tile (dragover)="onDragOver($event)" (drop)="onDrop($event)"  [style.width.px]="tileSize" [style.height.px]="tileSize">
-  </div>
-</ng-template>
